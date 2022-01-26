@@ -1,0 +1,25 @@
+$body-bg: $main-bg !default;
+
+$container-max-widths: (
+  sm: 315px,
+  md: 672px,
+  lg: 928px,
+  xl: 1344px,
+  xxl: 1624px,
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 672px,
+  lg: 928px,
+  xl: 1344px,
+  xxl: 1624px,
+) !default;
+
+$font-family-base: "Open Sans", sans-serif;
+$font-size-base: 0.8125rem;
+$line-height-base: 1.538;
+$h2-font-size: 28px;
+$headings-color: #0eb493;
+$headings-font-weight: 800;
