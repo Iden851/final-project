@@ -16,35 +16,39 @@ body {
   }
   @include media-breakpoint-up(sm) {
     &:before {
-      content: "small";
+      content: "small sm";
       background: #f00;
     }
   }
   @include media-breakpoint-up(md) {
     font-size: $font-size-base;
     &:before {
-      content: "middle";
+      content: "middle md";
       background: green;
     }
   }
   @include media-breakpoint-up(lg) {
     &:before {
-      content: "Large";
+      content: "Large lg";
       background: turquoise;
     }
   }
   @include media-breakpoint-up(xl) {
     &:before {
-      content: "XLarge";
+      content: "XLarge xl";
       background: #f09;
     }
   }
   @include media-breakpoint-up(xxl) {
     &:before {
-      content: "XXLarge";
+      content: "XXLarge xxl";
       background: #90f;
     }
   }
+}
+
+body {
+  color: $Black;
 }
 
 .news-item article {
