@@ -51,13 +51,80 @@ body {
   color: $Black;
 }
 
-.news-item article {
-  background: turquoise;
+a {
+  text-decoration: none;
+  color: $ActiveRegular;
+  &:hover {
+    color: $Accent;
+  }
 }
-.news-item article img {
-  display: block;
+
+// main
+
+.intro-text {
   width: 100%;
+  margin-top: -400px;
+  color: $White;
+  font-size: 38px;
+  font-weight: 700;
+  z-index: 3;
 }
-.news-item {
-  margin-bottom: 30px;
+
+.letterH {
+  // position: absolute;
+  background: url(../images/symbol.svg) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  position: relative;
+  margin-top: -111px;
+  // top: 0;
+  z-index: 2;
+  @include media-breakpoint-up(sm) {
+    width: 893px;
+    height: 1024px;
+    left: -200px;
+  }
+  @include media-breakpoint-up(md) {
+    width: 670px;
+    height: 768px;
+    left: calc(50% - 335px);
+    right: initial;
+    margin-top: -165px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 697px;
+    height: 799px;
+    left: calc(50% - 349px);
+    margin-top: -111px;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 872px;
+    height: 1000px;
+    left: calc(50% - 436px);
+  }
+}
+
+.options {
+  background: $MainRegular;
+  h2,
+  p {
+    color: $White;
+  }
+  .options-article {
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+// publications
+
+.intro {
+  height: 100vh;
+  &.dark {
+    background: linear-gradient(
+      228.57deg,
+      #323264 11.93%,
+      #323264 57.17%,
+      #643e72 87.46%
+    );
+  }
 }
