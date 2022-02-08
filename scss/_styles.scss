@@ -61,13 +61,68 @@ a {
 
 // main
 
+main {
+  background: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+}
+
+.dark {
+  .header {
+    .lang li a {
+      color: $White;
+    }
+    .lang li.active a {
+      color: $White;
+      &:hover {
+        color: $White;
+      }
+    }
+    .address li {
+      color: $White;
+    }
+  }
+  // h3 {
+  //   color: $ActiveRegular;
+  // }
+  p {
+    color: $White;
+  }
+}
+
 .intro-text {
+  position: absolute;
+  height: 100vh;
   width: 100%;
-  margin-top: -400px;
+  left: 0;
+  top: 0;
+  z-index: 3;
   color: $White;
   font-size: 38px;
   font-weight: 700;
-  z-index: 3;
+  span {
+    text-align: center;
+    width: 315px;
+
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+  }
+  .scroll {
+    position: absolute;
+    content: "";
+    left: calc(50% - 21px);
+    top: calc(100% - 50px);
+    width: 42px;
+    height: 42px;
+    background: url(../images/sprite/sprite.svg#button-scroll-regular) no-repeat;
+    &:hover {
+      background: url(../images/sprite/sprite.svg#button-scroll-hover) no-repeat;
+    }
+  }
 }
 
 .letterH {
@@ -89,13 +144,13 @@ a {
     height: 768px;
     left: calc(50% - 335px);
     right: initial;
-    margin-top: -165px;
+    margin-top: -153px;
   }
   @include media-breakpoint-up(xl) {
     width: 697px;
     height: 799px;
     left: calc(50% - 349px);
-    margin-top: -111px;
+    margin-top: -90px;
   }
   @include media-breakpoint-up(xxl) {
     width: 872px;
@@ -105,7 +160,7 @@ a {
 }
 
 .options {
-  background: $MainRegular;
+  margin-top: 60px;
   h2,
   p {
     color: $White;
@@ -115,16 +170,55 @@ a {
   }
 }
 
-// publications
-
-.intro {
-  height: 100vh;
-  &.dark {
-    background: linear-gradient(
-      228.57deg,
-      #323264 11.93%,
-      #323264 57.17%,
-      #643e72 87.46%
-    );
+.idn-options a {
+  color: $MainTextColor;
+  &.active {
+    background-image: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+    color: $Accent;
   }
 }
+
+.features {
+  .intro-features {
+    a {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    h1 {
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .articles-features {
+    img {
+      height: 92px;
+      width: 92px;
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: $ActiveRegular;
+      &:hover {
+        color: $Accent;
+      }
+      h3 {
+        color: inherit;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// publications
