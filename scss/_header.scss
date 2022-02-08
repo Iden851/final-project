@@ -1,28 +1,28 @@
 .intro {
   height: 100vh;
   overflow: hidden;
-  &.dark {
-    background: linear-gradient(
-      228.57deg,
-      #323264 11.93%,
-      #323264 57.17%,
-      #643e72 87.46%
-    );
-    .header {
-      .lang li a {
-        color: $White;
-      }
-      .lang li.active a {
-        color: $White;
-        &:hover {
-          color: $White;
-        }
-      }
-      .address li {
-        color: $White;
-      }
-    }
-  }
+  // &.dark {
+  //   background: linear-gradient(
+  //     228.57deg,
+  //     #323264 11.93%,
+  //     #323264 57.17%,
+  //     #643e72 87.46%
+  //   );
+  //   .header {
+  //     .lang li a {
+  //       color: $White;
+  //     }
+  //     .lang li.active a {
+  //       color: $White;
+  //       &:hover {
+  //         color: $White;
+  //       }
+  //     }
+  //     .address li {
+  //       color: $White;
+  //     }
+  //   }
+  // }
 }
 
 .header {
@@ -198,9 +198,9 @@
       top: 60px;
       width: 32px;
       height: 32px;
-      background: url(../images/sprite/sprite.svg#burger-regular) no-repeat;
-      background-color: $White;
-      border-radius: 8px;
+      background: url(../images/sprite/sprite.svg#burger-dark) no-repeat;
+      // background-color: $MainRegular;
+      // border-radius: 8px;
       cursor: pointer;
       &:hover {
         background: url(../images/sprite/sprite.svg#burger-active) no-repeat;
