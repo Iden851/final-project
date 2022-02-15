@@ -101,8 +101,8 @@
     }
     a {
       height: 25px;
-      padding-left: 7px;
-      padding-right: 7px;
+      padding-left: 8px;
+      padding-right: 8px;
       display: flex;
       align-items: center;
       color: $MainTextColor;
@@ -146,6 +146,10 @@
     a {
       font-weight: 700;
       color: #fff;
+      margin-right: 9px;
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
+      }
       &.ico-fb {
         background: url(../images/sprite/sprite.svg#fb-header) no-repeat;
         width: 25px;
@@ -166,7 +170,7 @@
     height: 100vh;
     padding: 0 8px;
     @include media-breakpoint-up(md) {
-      top: 195px;
+      top: 161px;
       left: 0;
       right: initial;
       height: auto;
@@ -174,7 +178,8 @@
       padding: 0;
     }
     @include media-breakpoint-up(lg) {
-      top: 91px;
+      padding: 0;
+      top: 56px;
       right: 0;
       left: initial;
     }
@@ -194,8 +199,8 @@
     .burger {
       z-index: 9;
       position: absolute;
-      right: 15px;
-      top: 60px;
+      right: 0;
+      top: 57px;
       width: 32px;
       height: 32px;
       background: url(../images/sprite/sprite.svg#burger-dark) no-repeat;
@@ -243,6 +248,7 @@
         }
         @include media-breakpoint-up(lg) {
           padding-left: 15px;
+          padding-right: 0;
         }
         &.active {
           a {
