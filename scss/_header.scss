@@ -1,28 +1,6 @@
 .intro {
   height: 100vh;
   overflow: hidden;
-  // &.dark {
-  //   background: linear-gradient(
-  //     228.57deg,
-  //     #323264 11.93%,
-  //     #323264 57.17%,
-  //     #643e72 87.46%
-  //   );
-  //   .header {
-  //     .lang li a {
-  //       color: $White;
-  //     }
-  //     .lang li.active a {
-  //       color: $White;
-  //       &:hover {
-  //         color: $White;
-  //       }
-  //     }
-  //     .address li {
-  //       color: $White;
-  //     }
-  //   }
-  // }
 }
 
 .header {
@@ -259,7 +237,7 @@
               width: 100%;
               background: $Accent;
               position: absolute;
-              bottom: 0;
+              bottom: 5px;
               left: 0;
               display: none;
               @include media-breakpoint-up(md) {
@@ -305,13 +283,109 @@
             width: 100%;
             background: $White;
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 0;
             @include media-breakpoint-up(md) {
               display: block;
               color: $White;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .header {
+    .logo-light {
+      .logo {
+        background: url(../images/logo/hlegal-logo.svg) no-repeat;
+        background-size: 69px 32px;
+        width: 69px;
+        height: 32px;
+        display: block;
+        text-indent: -9999px;
+        margin-left: 15px;
+        @include media-breakpoint-up(md) {
+          background-size: auto;
+          width: 160px;
+          height: 60px;
+          margin-left: 0;
+        }
+      }
+      p {
+        color: $MainRegular;
+        font-size: 20px;
+        line-height: 24px;
+        @include media-breakpoint-up(md) {
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+    }
+    .address {
+      a {
+        color: $MainTextColor;
+
+        &.ico-fb {
+          background: url(../images/sprite/sprite.svg#fb-header-light) no-repeat;
+          width: 25px;
+          height: 25px;
+          display: block;
+
+          &:hover {
+            background: url(../images/sprite/sprite.svg#fb-header-hover)
+              no-repeat;
+          }
+        }
+      }
+    }
+    .main-nav {
+      li {
+        &.active {
+          a {
+            &:after {
+              background: $Accent;
+            }
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $ActiveRegular;
+        &.active {
+          color: $Accent;
+        }
+        &:hover {
+          &:after {
+            display: none;
+            content: "";
+            height: 2px;
+            width: 100%;
+            background: $ActiveRegular;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            @include media-breakpoint-up(md) {
+              display: block;
+              color: $ActiveRegular;
+            }
+          }
+        }
+      }
+
+      .burger {
+        z-index: 9;
+        position: absolute;
+        right: 0;
+        top: 57px;
+        width: 32px;
+        height: 32px;
+        background: url(../images/sprite/sprite.svg#burger-light) no-repeat;
+        cursor: pointer;
+        &:hover {
+          background: url(../images/sprite/sprite.svg#burger-active) no-repeat;
         }
       }
     }
