@@ -251,7 +251,6 @@
       a {
         color: $ActiveRegular;
         font-weight: 700;
-        padding-bottom: 6px;
         position: relative;
         background: $Main-bg;
         border-radius: 12px;
@@ -266,6 +265,7 @@
           background: $SeparatorColor;
         }
         @include media-breakpoint-up(md) {
+          padding-bottom: 6px;
           background: none;
           width: auto;
           justify-content: flex-start;
@@ -352,7 +352,7 @@
     .main-nav {
       ul {
         transform: translate(0, -250%);
-        transition: transform 0.75s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
       }
       li {
         &.active {
