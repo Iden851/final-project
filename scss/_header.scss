@@ -148,7 +148,7 @@
     height: 100vh;
     padding: 0 8px;
     @include media-breakpoint-up(md) {
-      top: 161px;
+      top: 350px;
       left: 0;
       right: initial;
       height: auto;
@@ -157,7 +157,7 @@
     }
     @include media-breakpoint-up(lg) {
       padding: 0;
-      top: 56px;
+      top: 245px;
       right: 0;
       left: initial;
     }
@@ -199,7 +199,7 @@
       z-index: 1;
       width: 100%;
       bottom: 0;
-      transform: translate(0, 100%);
+      transform: translate(0, -250%);
       transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
       position: absolute;
       border-radius: 12px 12px 0px 0px;
@@ -207,7 +207,8 @@
       flex-direction: column;
       @include media-breakpoint-up(md) {
         flex-direction: row;
-        padding: 0;
+        padding: 50px 0 0;
+        margin: auto;
         background: none;
         bottom: initial;
       }
@@ -324,6 +325,13 @@
         }
       }
     }
+    .lang-address {
+      background: $Main-bg;
+      @include media-breakpoint-up(md) {
+        background: none;
+      }
+    }
+
     .address {
       a {
         color: $MainTextColor;
@@ -342,6 +350,10 @@
       }
     }
     .main-nav {
+      ul {
+        transform: translate(0, -250%);
+        transition: transform 0.75s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
       li {
         &.active {
           a {

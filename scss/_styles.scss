@@ -1,51 +1,51 @@
-body {
-  padding-top: 20px;
-  &:before {
-    z-index: 10001;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: fixed;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: limegreen;
-    content: "Xsmall";
-  }
-  @include media-breakpoint-up(sm) {
-    &:before {
-      content: "small sm";
-      background: #f00;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    font-size: $font-size-base;
-    &:before {
-      content: "middle md";
-      background: green;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    &:before {
-      content: "Large lg";
-      background: turquoise;
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    &:before {
-      content: "XLarge xl";
-      background: #f09;
-    }
-  }
-  @include media-breakpoint-up(xxl) {
-    &:before {
-      content: "XXLarge xxl";
-      background: #90f;
-    }
-  }
-}
+// body {
+//   padding-top: 20px;
+//   &:before {
+//     z-index: 10001;
+//     line-height: 20px;
+//     font-weight: bold;
+//     text-align: center;
+//     position: fixed;
+//     font-size: 20px;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 20px;
+//     background: limegreen;
+//     content: "Xsmall";
+//   }
+//   @include media-breakpoint-up(sm) {
+//     &:before {
+//       content: "small sm";
+//       background: #f00;
+//     }
+//   }
+//   @include media-breakpoint-up(md) {
+//     font-size: $font-size-base;
+//     &:before {
+//       content: "middle md";
+//       background: green;
+//     }
+//   }
+//   @include media-breakpoint-up(lg) {
+//     &:before {
+//       content: "Large lg";
+//       background: turquoise;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//     &:before {
+//       content: "XLarge xl";
+//       background: #f09;
+//     }
+//   }
+//   @include media-breakpoint-up(xxl) {
+//     &:before {
+//       content: "XXLarge xxl";
+//       background: #90f;
+//     }
+//   }
+// }
 
 body {
   color: $Black;
@@ -133,7 +133,42 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.idn-publication {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 15px;
 
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+  .pbl-article {
+    background: $White;
+    padding: 30px 30px;
+  }
+  h4 {
+    margin-bottom: 15px;
+  }
+  time {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    color: $MainTextColor;
+    display: block;
+    margin-bottom: 15px;
+  }
+  span {
+    display: block;
+    margin-bottom: 15px;
+    height: 4px;
+    width: 100%;
+    background: $SeparatorColor;
+  }
+}
 // .arrow {
 //   position: absolute;
 //   width: 10px;
@@ -490,6 +525,7 @@ h3 {
 }
 
 .home-publications {
+  background: $Main-bg;
   .intro-publications {
     h3 {
       padding-top: 30px;
@@ -504,54 +540,7 @@ h3 {
       }
     }
   }
-  .idn-publication {
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    @include media-breakpoint-up(md) {
-      padding-left: 0;
-      padding-right: 0;
-      &:first-child {
-        padding-right: 30px;
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      &:nth-child(2) {
-        padding-right: 30px;
-      }
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 200px;
-    }
-    div {
-      background: $White;
-      padding: 30px 30px;
-    }
-    h4 {
-      margin-bottom: 15px;
-    }
-    time {
-      text-transform: uppercase;
-      font-family: Montserrat;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 15px;
-      color: $MainTextColor;
-      display: block;
-      margin-bottom: 15px;
-    }
-    span {
-      display: block;
-      margin-bottom: 15px;
-      height: 4px;
-      width: 100%;
-      background: $SeparatorColor;
-    }
-  }
+  @extend .idn-publication;
 }
 
 .footer {
@@ -564,6 +553,9 @@ h3 {
     top: 225px;
     color: $MainTextColor;
     @include media-breakpoint-up(md) {
+      top: 150px;
+    }
+    @include media-breakpoint-up(lg) {
       text-align: right;
       top: 30px;
     }
@@ -583,6 +575,10 @@ h3 {
     @include media-breakpoint-up(md) {
       justify-content: start;
       flex-direction: row;
+      padding-left: 125px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
     }
     span {
       color: $MainRegular;
@@ -622,6 +618,12 @@ h3 {
     }
   }
   .footer-contacts {
+    @include media-breakpoint-up(md) {
+      padding-left: 125px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+    }
     .ftr-contacts {
       padding: 0;
       margin: 0;
@@ -631,10 +633,14 @@ h3 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 80px;
       @include media-breakpoint-up(md) {
         flex-direction: row;
         justify-content: start;
         margin-top: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
       }
       .ftr-fb-icon {
         height: 38px;
@@ -678,13 +684,13 @@ h3 {
         margin-left: 0;
         font-weight: 700;
         margin-top: 10px;
-        margin-bottom: 80px;
+
         position: relative;
         @include media-breakpoint-up(md) {
           margin-left: 26px;
           margin-top: 7px;
-          margin-bottom: 0;
         }
+
         &:before {
           display: none;
           content: "";
@@ -709,9 +715,11 @@ h3 {
 .about-us {
   padding: 30px 30px;
   @include media-breakpoint-up(md) {
+    margin-top: 30px;
     padding: 60px 0px;
   }
   @include media-breakpoint-up(xl) {
+    margin-top: 0;
     padding: 60px 120px;
   }
   h1 {
@@ -831,5 +839,75 @@ h3 {
   display: none;
   @include media-breakpoint-up(md) {
     display: block;
+  }
+}
+
+// publications
+
+.home-publications {
+  padding: 0 -15px;
+  &.public-main {
+    margin-top: 0;
+    @include media-breakpoint-up(md) {
+      margin-top: 120px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+    }
+  }
+  .public-switch {
+    margin-top: 30px;
+    width: 233px;
+    height: 42px;
+    background: $SeparatorColor;
+    border-radius: 12px;
+    a {
+      margin: 0 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 105px;
+      height: 38px;
+      border-radius: 12px;
+      &.active {
+        background: $White;
+      }
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .pbl-article {
+    height: auto;
+    @include media-breakpoint-up(md) {
+      height: 314px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 356px;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 250px;
+    }
+    @include media-breakpoint-up(xxl) {
+      height: 230px;
+    }
+  }
+  .more-btn {
+    .public-btn {
+      margin-bottom: 30px;
+      width: 211px;
+      height: 56px;
+      background: $ActiveRegular;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+      .more-title {
+        color: $White;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
   }
 }
