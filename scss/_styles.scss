@@ -251,20 +251,16 @@ main {
 
 .options {
   margin-top: 60px;
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
-  @include media-breakpoint-up(md) {
-    margin-left: 0;
-  }
   @include media-breakpoint-up(lg) {
     flex-direction: row;
     margin-left: -85px;
   }
-
   .idn-options {
     display: flex;
     overflow: auto;
+
     @include media-breakpoint-up(lg) {
       overflow: inherit;
       flex-direction: column;
